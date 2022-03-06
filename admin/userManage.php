@@ -82,7 +82,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header" style="background-color: rgb(111 202 203);">
-        <h5 class="modal-title" id="newUser">Create New User</h5>
+        <h5 class="modal-title" id="newUser">สมัครสมาชิก</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -91,34 +91,34 @@
         <form action="partials/_userManage.php" method="post">
               <div class="form-group">
                   <b><label for="username">Username</label></b>
-                  <input class="form-control" id="username" name="username" placeholder="Choose a unique Username" type="text" required minlength="3" maxlength="11">
+                  <input class="form-control" id="username" name="username"type="text" required minlength="3" maxlength="11">
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <b><label for="firstName">First Name:</label></b>
-                  <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" required>
+                  <b><label for="firstName">ชื่อ:</label></b>
+                  <input type="text" class="form-control" id="firstName" name="firstName"  required>
                 </div>
                 <div class="form-group col-md-6">
-                  <b><label for="lastName">Last name:</label></b>
-                  <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name" required>
+                  <b><label for="lastName">นามสกุล:</label></b>
+                  <input type="text" class="form-control" id="lastName" name="lastName"  required>
                 </div>
               </div>
               <div class="form-group">
                   <b><label for="email">Email:</label></b>
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email" required>
+                  <input type="email" class="form-control" id="email" name="email"  required>
               </div>
               <div class="form-group row my-0">
                     <div class="form-group col-md-6 my-0">
-                        <b><label for="phone">Phone No:</label></b>
+                        <b><label for="phone">เบอร์โทรศัพท์:</label></b>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon">+91</span>
+                                <span class="input-group-text" id="basic-addon">+66</span>
                             </div>
                             <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Phone No" required pattern="[0-9]{10}" maxlength="10">
                         </div>
                     </div>
                     <div class="form-group col-md-6 my-0">
-                        <b><label for="userType">Type:</label></b>
+                        <b><label for="userType">สถานะ:</label></b>
                         <select name="userType" id="userType" class="custom-select browser-default" required>
                         <option value="0">User</option>
                         <option value="1">Admin</option>
@@ -127,13 +127,13 @@
               </div>
               <div class="form-group">
                   <b><label for="password">Password:</label></b>
-                  <input class="form-control" id="password" name="password" placeholder="Enter Password" type="password" required data-toggle="password" minlength="4" maxlength="21">
+                  <input class="form-control" id="password" name="password"  type="password" required data-toggle="password" minlength="4" maxlength="21">
               </div>
               <div class="form-group">
-                  <b><label for="password1">Renter Password:</label></b>
-                  <input class="form-control" id="cpassword" name="cpassword" placeholder="Renter Password" type="password" required data-toggle="password" minlength="4" maxlength="21">
+                  <b><label for="password1">ยืนยัน Password:</label></b>
+                  <input class="form-control" id="cpassword" name="cpassword"  type="password" required data-toggle="password" minlength="4" maxlength="21">
               </div>
-              <button type="submit" name="createUser" class="btn btn-success">Submit</button>
+              <button type="submit" name="createUser" class="btn btn-success">ตกลง</button>
             </form>
       </div>
     </div>
@@ -169,18 +169,18 @@
             <div class="text-left my-2 row" style="border-bottom: 2px solid #dee2e6;">
                 <div class="form-group col-md-8">
                     <form action="partials/_userManage.php" method="post" enctype="multipart/form-data">
-                        <b><label for="image">Profile Picture</label></b>
+                        <b><label for="image">รูปโปรไฟล์</label></b>
                         <input type="file" name="userimage" id="userimage" accept=".jpg" class="form-control" required style="border:none;">
                         <small id="Info" class="form-text text-muted mx-3">Please .jpg file upload.</small>
                         <input type="hidden" id="userId" name="userId" value="<?php echo $Id; ?>">
-                        <button type="submit" class="btn btn-success mt-3" name="updateProfilePhoto">Update Img</button>
+                        <button type="submit" class="btn btn-success mt-3" name="updateProfilePhoto">อัพเดท</button>
                     </form>         
                 </div>
                 <div class="form-group col-md-4">
                     <img src="/OnlinePizzaDelivery/img/person-<?php echo $Id; ?>.jpg" alt="Profile Photo" width="100" height="100" onError="this.src ='/OnlinePizzaDelivery/img/profilePic.jpg'">
                     <form action="partials/_userManage.php" method="post">
                         <input type="hidden" id="userId" name="userId" value="<?php echo $Id; ?>">
-                        <button type="submit" class="btn btn-success mt-2" name="removeProfilePhoto">Remove Img</button>
+                        <button type="submit" class="btn btn-success mt-2" name="removeProfilePhoto">ลบรูปภาพ</button>
                     </form>
                 </div>
             </div>
@@ -192,11 +192,11 @@
                 </div>
                 <div class="form-row">
                 <div class="form-group col-md-6">
-                    <b><label for="firstName">First Name:</label></b>
+                    <b><label for="firstName">ชื่อ:</label></b>
                     <input type="text" class="form-control" id="firstName" name="firstName" value="<?php echo $firstName; ?>" required>
                 </div>
                 <div class="form-group col-md-6">
-                    <b><label for="lastName">Last name:</label></b>
+                    <b><label for="lastName">นามสกุล:</label></b>
                     <input type="text" class="form-control" id="lastName" name="lastName" value="<?php echo $lastName; ?>" required>
                 </div>
                 </div>
@@ -206,16 +206,16 @@
                 </div>
                 <div class="form-group row my-0">
                     <div class="form-group col-md-6 my-0">
-                        <b><label for="phone">Phone No:</label></b>
+                        <b><label for="phone">เบอร์โทรศัพท์:</label></b>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" id="basic-addon">+91</span>
+                                <span class="input-group-text" id="basic-addon">+66</span>
                             </div>
                             <input type="tel" class="form-control" id="phone" name="phone" value="<?php echo $phone; ?>" required pattern="[0-9]{10}" maxlength="10">
                         </div>
                     </div>
                     <div class="form-group col-md-6 my-0">
-                        <b><label for="userType">Type:</label></b>
+                        <b><label for="userType">สถานะ:</label></b>
                         <select name="userType" id="userType" class="custom-select browser-default" required>
                         <?php 
                             if($userType == 1) {
@@ -235,7 +235,7 @@
                     </div>
                 </div>
                 <input type="hidden" id="userId" name="userId" value="<?php echo $Id; ?>">
-                <button type="submit" name="editUser" class="btn btn-success">Update</button>
+                <button type="submit" name="editUser" class="btn btn-success">อัพเดท</button>
             </form>
         </div>
     </div>
