@@ -32,16 +32,6 @@
             <input type="hidden" id="orderId" name="orderId" value="<?php echo $orderid; ?>">
             <button type="submit" class="btn btn-success mb-2" name="updateStatus">อัพเดท</button>
         </form>
-        <?php 
-            $deliveryDetailSql = "SELECT * FROM `deliverydetails` WHERE `orderId`= $orderid";
-            $deliveryDetailResult = mysqli_query($conn, $deliveryDetailSql);
-            $deliveryDetailRow = mysqli_fetch_assoc($deliveryDetailResult);
-            $trackId = $deliveryDetailRow['id'];
-            $deliveryBoyName = $deliveryDetailRow['deliveryBoyName'];
-            $deliveryBoyPhoneNo = $deliveryDetailRow['deliveryBoyPhoneNo'];
-            $deliveryTime = $deliveryDetailRow['deliveryTime'];
-            if($orderStatus>0 && $orderStatus<5) { 
-        ?><?php } ?>
       </div>
     </div>
   </div>

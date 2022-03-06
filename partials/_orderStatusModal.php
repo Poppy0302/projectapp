@@ -136,23 +136,7 @@
         else
             $tstatus = "คำสั่งถูกยกเลิก.";
 
-        if($status >= 1 && $status <= 4) {
-            $deliveryDetailSql = "SELECT * FROM `deliverydetails` WHERE `orderId`= $orderid";
-            $deliveryDetailResult = mysqli_query($conn, $deliveryDetailSql);
-            $deliveryDetailRow = mysqli_fetch_assoc($deliveryDetailResult);
-            $trackId = $deliveryDetailRow['id'];
-            $deliveryBoyName = $deliveryDetailRow['deliveryBoyName'];
-            $deliveryBoyPhoneNo = $deliveryDetailRow['deliveryBoyPhoneNo'];
-            $deliveryTime = $deliveryDetailRow['deliveryTime'];
-            if($status == 4)
-                $deliveryTime = 'xx';
-        }
-        else {
-            $trackId = 'xxxxx';
-            $deliveryBoyName = '';
-            $deliveryBoyPhoneNo = '';
-            $deliveryTime = 'xx';
-        }
+       
 
 ?>
 <!-- Modal -->
